@@ -19,7 +19,7 @@ public class ConnectionProvider {
            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/LMS","root","root");
            return con;
         }
-        catch(Exception e)
+        catch(ClassNotFoundException | SQLException e)
         {
             System.out.println(e);
             return null;
